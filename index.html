@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			top: 0px;
+			font-family: sans-serif;
+		}
+		body{
+			box-sizing: border-box;
+			background-image: url('https://image.freepik.com/free-photo/top-view-calculator-pink-background_23-2148565047.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100vh;
+			width: 100%;
+		}
+		.calc{
+			position: fixed;
+			background-color: #d2d2e0;
+			height: 430px;
+			width: 250px;
+			margin: 10% 41%;
+			border-radius: 20px;
+			padding: 20px;
+			border: 2px solid black;
+		}
+		input{
+			width: 50px;
+			height: 50px;
+			background-color: #333333;
+			color: white;
+			border: none;
+			border-radius: 20px;
+			margin: 4px;
+			font-weight: bolder;
+			transition-duration: 0.5s;
+
+		}
+		.operator{
+			background-color: #737373;
+		}
+		.ac{
+			width: 100px;
+			margin-right: 17px;
+		}
+		.op{
+            border: 2px solid black;
+			height: 70px;
+			width: 230px;
+			background-color: #d9d9d9;
+			color: black;
+		}
+		#allclear{
+			background-color: #cc0088;
+		}
+		.operator:hover{
+			transform: scale(0.9);
+		}
+		input[type="button"]:hover
+		{
+			transform: scale(0.9);
+			box-shadow: 0px 0px 5px #cc0088;
+		}
+		.head{
+			height: 40px;
+			background-color:#ff80d5;
+			padding: 20px;
+			text-decoration: underline;
+			color: #660066;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<div class="head">
+		    <h1>CALCULATOR</h1>
+		</div>
+	<div class="calc">
+		<form>
+			<div>
+				<input type="text" name="op" placeholder="0" value="" disabled class="op" id="output">
+			</div>
+			<div>
+				<input type="button" value="AC" onclick="op.value=''" class="ac" id="allclear">
+				<input type="button" value="C" onclick="op.value = op.value.slice(0, -1);" class="operator">
+				<input type="button" value="%" onclick="op.value+='%'" class="operator">
+			</div>
+			<div>
+				<input type="button" value="7" onclick="op.value+='7'">
+				<input type="button" value="8" onclick="op.value+='8'">
+				<input type="button" value="9" onclick="op.value+='9'">
+				<input type="button" value="+" onclick="op.value+='+'" class="operator">
+			</div>
+			<div>
+				<input type="button" value="4" onclick="op.value+='4'">
+				<input type="button" value="5" onclick="op.value+='5'">
+				<input type="button" value="6" onclick="op.value+='6'">
+				<input type="button" value="-" onclick="op.value+='-'" class="operator">
+			</div>
+			<div>
+				<input type="button" value="1" onclick="op.value+='1'">
+				<input type="button" value="2" onclick="op.value+='2'">
+				<input type="button" value="3" onclick="op.value+='3'">
+				<input type="button" value="X" onclick="op.value+='*'" class="operator">
+			</div>
+			<div>
+				<input type="button" value="." onclick="op.value+='.'">
+				<input type="button" value="0" onclick="op.value+='0'">
+				<input type="button" value="=" onclick="op.value=eval(op.value)">
+				<input type="button" value="/" onclick="op.value+='/'" class="operator">
+			</div>
+
+			<div>
+				<input type="button" value="√" onclick="op.value=Math.sqrt(parseFloat(op.value))" class="operator">
+				<input type="button" value="sin" onclick="op.value=Math.sin(parseFloat(op.value))" class="operator">
+				<input type="button" value="cos" onclick="op.value=Math.cos(parseFloat(op.value));" class="operator">
+				<input type="button" value="tan" onclick="op.value=Math.tan(parseFloat(op.value));" class="operator">
+			</div>
+		</form>
+	</div>
+	</center>
+
+</body>
+</html>
+
+   
+            
